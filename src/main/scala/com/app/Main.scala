@@ -21,7 +21,7 @@ object Main extends App {
   val streamingContext = new StreamingContext(conf, duration)
 
   val kafkaParams = Map[String, Object](
-    "bootstrap.servers" -> "localhost:9092",
+    "bootstrap.servers" -> "sandbox-hdp.hortonworks.com:6667",
     "key.deserializer" -> classOf[StringDeserializer],
     "value.deserializer" -> classOf[StringDeserializer],
     "group.id" -> "stream-hw",
