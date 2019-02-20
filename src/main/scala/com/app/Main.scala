@@ -35,6 +35,6 @@ object Main extends App {
   StreamUtils.publishRDDs(stream, elasticIndex)
 
   streamingContext.start()
-  streamingContext.awaitTerminationOrTimeout(3000)
+  streamingContext.awaitTermination()
 
 }
